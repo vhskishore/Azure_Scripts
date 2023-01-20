@@ -25,3 +25,16 @@ az vm create -g ${RG} -n LVM-1 --image UbuntuLTS --vnet-name ${RG}-vNet-1 --subn
 az vm create -g ${RG} -n LVM-2 --image UbuntuLTS --vnet-name ${RG}-vNet-2 --subnet ${RG}-Subnet-1 --admin-username adminhsk --admin-password "Bharath@123456" --size Standard_B1s --nsg ""
 
 az vm create -g ${RG} -n LVM-3 --image UbuntuLTS --vnet-name ${RG}-vNet-3 --subnet ${RG}-Subnet-1 --admin-username adminhsk --admin-password "Bharath@123456" --size Standard_B1s --nsg "" -l westus
+
+# Delete vNet Peering
+#az network vnet peering delete --resource-group ${RG} --name vNet-1TOvNet-2 --vnet-name ${RG}-vNet-1
+
+#az network vnet peering delete --resource-group ${RG} --name vNet-2TOvNet-1 --vnet-name ${RG}-vNet-2
+
+#az network vnet peering delete --resource-group ${RG} --name vNet-2TOvNet-3 --vnet-name ${RG}-vNet-2
+
+#az network vnet peering delete --resource-group ${RG} --name vNet-3TOvNet-2 --vnet-name ${RG}-vNet-3
+
+#az network vnet peering delete --resource-group ${RG} --name vNet-1TOvNet-3 --vnet-name ${RG}-vNet-1
+
+#az network vnet peering delete --resource-group ${RG} --name vNet-3TOvNet-1 --vnet-name ${RG}-vNet-3
